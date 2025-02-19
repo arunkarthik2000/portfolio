@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arun Karthik Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Arun Karthik Sengottuvel</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3" style="font-size: 3.5rem;">I'm <span>Arun Karthik</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Student  ',
+						'Engineer  ',
+						'Tech Enthusiast  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+			            <h5>CS Graduate Student | Software Developer</h5>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p>
+							<a href="https://www.linkedin.com/in/arunkarthik2000/" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+							<a href="https://github.com/arunkarthik2000/" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">GitHub</a>
+						</p>						
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">										
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+										
+										  <p><span class="title-s"><b>Name: </b></span> <span>Arun Karthik</span></p>
+										  <p><span class="title-s"><b>Current Role: </b></span> <span>Master's Student, Computer Science</span></p>
+										  <p><span class="title-s"><b>University: </b></span> <span>University of Southern California</span></p>
+										  <p><span class="title-s"><b>Location: </b></span> <span>Los Angeles, CA</span></p>
+										</div>
+									 </div>									  
+								  </div>
+
+								  <div class="skill-mf">
+									<p class="title-s"><b>Technology Stack</b></p>
+								
+									<span>C/C++</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								
+									<span>Python</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								
+									<span>Java</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								
+									<span>HTML</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								
+									<span>CSS</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								
+									<span>JavaScript</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>TypeScript</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>	
+								
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>								
+															
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+    
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Passionate about leveraging technology to create meaningful impact, I am currently pursuing my Master's in Computer Science at the University of Southern California. With over two years of industry experience as a Software Developer at Oracle, I worked on security enhancement projects for Oracle’s 4G router solution. My expertise spans Full-Stack Development, Machine Learning, and Software Security, with a focus on building scalable and secure applications. I thrive in dynamic environments where problem-solving and innovation drive success.</p>
+								
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile: </span> <span> Software Development & Machine Learning</span></li>
+									<li class="d-flex"><span>Education: </span> <span> M.S. in Computer Science, USC [Los Angeles, CA] <br> B.Tech in Electronics and Communication Engineering, VIT [Vellore, India] </span></li>
+									<li class="d-flex"><span>Languages: </span> <span>English, Tamil, Hindi, German (Elementary Proficiency)</span></li>
+									<li class="d-flex"><span>Previous Experience: </span> <span> <br> Software Developer at Oracle (2 Years)</span></li>
+									<li class="d-flex"><span>Frameworks & Tools: </span> <span>TensorFlow, Keras, PyTorch, Numpy, Pandas, Flask, Node.js, Express, React, Angular, MongoDB, GCP, Jenkins, Git, Jira</span></li>
+									<li class="d-flex"><span>Knowledge Areas: </span> <span> Software Development Life Cycle, Web Development, Android App Development, Computer Networking, Deep Learning, Natural Language Processing, Linux Programming</span></li>
+									<li class="d-flex"><span>Interests: </span> <span> Sports, Gaming, AI, Cybersecurity, Travel</span></li>
+								</ul>
+							</div>							
+						</div>
+
+
+						<!-- <div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Master’s student in Computer Science with 2+ years of Software Engineering experience in system security, backend development, and full-stack engineering. Proficient in Python, C++, Angular, and Node.js, with hands-on experience developing high-performance, scalable applications. Adept at designing secure software solutions, optimizing system performance, and tackling complex technical challenges.
+			</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">University of Southern California</span>
+					<p class="mt-1"><em>Los Angeles, CA</em></p>
+					<h2>USC Financial Aid - Graduate Assistant</h2>
+					<span class="position">Apr 2024 - Present</span>
+					<p class="mt-4">
+						<ul>
+							<li>Track financial aid documents, update Student Information System (SIS), and assist in reviewing students' financial aid eligibility.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Oracle</span>
+					<p class="mt-1"><em>Bengaluru, India</em></p>
+					<h2>Software Developer</h2>
+					<span class="position">Jul 2021 - Jul 2023</span>
+					<p class="mt-4">
+						<ul>
+							<li>Led and executed significant security enhancement projects for Oracle's Diameter Signaling Router (DSR), achieving compliance with various security standards.</li>
+							<li>Extended signaling firewall feature to various DSR server types, strengthened SSH security, and upgraded TLS protocol versions and cipher lists to align with state-of-the-art cryptographic standards, yielding a 30% improvement in overall system robustness.</li>
+							<li>Resolved numerous customer-critical issues for leading telecom operators, resulting in a 40% decrease in overall customer complaints and a 25% increase in customer satisfaction ratings.</li>
+							<li>Automated DSR security scanning process through the implementation of ML techniques, leading to an 80% reduction in total scanning cycle time.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		
+			<div class="col-md-12">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Oracle</span>
+					<p class="mt-1"><em>Bengaluru, India</em></p>
+					<h2>Software Developer Intern</h2>
+					<span class="position">Feb 2021 - Jun 2021</span>
+					<p class="mt-4">
+						<ul>
+							<li>Improved security features of Oracle's Diameter Signaling Router (DSR), decreasing security vulnerability of the product by 70%.</li>
+							<li>Engineered an automated procedure to address vulnerabilities reported by CIS-Benchmarking scan on DSR, increasing CIS-CAT score from an initial 62% to an impressive 90%.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		
+			<div class="col-md-12">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Larsen & Toubro (L&T)</span>
+					<p class="mt-1"><em>Coimbatore, India</em></p>
+					<h2>Project Intern</h2>
+					<span class="position">May 2019 - Jun 2019</span>
+					<p class="mt-4">
+						<ul>
+							<li>Developed predictive maintenance models for an HVAC system leveraging IoT monitoring and ML algorithms, leading to a 45% reduction in unplanned downtime and a 30% increase in energy efficiency.</li>
+							<li>Monitored HVAC system conditions, promptly transmitting anomaly data through Wi-Fi or RF communication for preemptive corrective measures, thereby mitigating potential failures.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+						
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">University of Southern California</span>
+						<p class="mt-1"><em>Los Angeles, CA</em></p>
+						<h2>Master of Science</h2>
+						<h5>Computer Science</h5>
+						<span class="position">Aug 2023 - May 2025</span>
+						<p class="mt-4">GPA: 4.0/4.0</p>
+						<br>
+						<br>
+						<br>
+					</div>
+				</div>
+			
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Vellore Institute of Technology</span>
+						<p class="mt-1"><em>Vellore, India</em></p>
+						<h2>Bachelor of Technology</h2>
+						<h5>Electronics and Communication Engineering</h5>
+						<span class="position">Jul 2017 - Jun 2021</span>
+						<p class="mt-4">GPA: 9.57/10</p>
+						<p class="mt-4">Honors: 3rd Rank Holder (Electronics and Communication Engineering)</p>
+					</div>
+				</div>
+			</div>
+		
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p>
+						<a href="https://drive.google.com/file/d/1OpNVGLSPkK2qh7JL8J6D0TPXRq3Fq3aF/view" 
+						   class="btn btn-primary py-4 px-5" 
+						   target="_blank">
+						   View Resume
+						</a>
+					</p>
+				</div>
+			</div>
+			
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+			<p>Here are selected projects across Machine Learning, AI, Web & Mobile App Development, Data Analytics, Robotics, and Embedded Systems.</p>
+		</div>
+        </div>
+        <div class="row d-flex">
+			<div class="col-md-6 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://webtechhw3-frontend.wl.r.appspot.com/" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://webtechhw3-frontend.wl.r.appspot.com/" target="_blank">Stock Market Analysis and Trading Platform</a></h3>
+					<br>
+					<p>Developed a Web and Android application that enables users to track real-time stock prices, engage in virtual trading, and manage portfolios.</p>
+					<p><strong>Technologies Used:</strong> AngularJS, Node.js, Flask, Java, Android Studio, MongoDB, Google Cloud Platform</p>
+				  </div>
+				</div>
+			  </div>			  
+			  
+			  <div class="col-md-6 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/arunkarthik2000/CSCI544-Applied-Natural-Language-Processing/tree/main/Project" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg'); background-size: 550px 180px; background-position: center; background-repeat: no-repeat;">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/arunkarthik2000/CSCI544-Applied-Natural-Language-Processing/tree/main/Project" target="_blank">Scene-Based Movie Search using Multi-Modal Embeddings</a></h3>
+						<p>Created a scene-based movie search framework that integrates textual and video embeddings, allowing users to input scene descriptions and receive highly relevant movie recommendations.</p>
+						<p><strong>Technologies Used:</strong> Python, NLTK, Transformers, BERT, RoBERTa, DenseNet, Pegasus-LARGE, Parrot Paraphraser</p>
+					</div>
+				</div>
+			</div>
+			
+          </div>
+		  <div class="row d-flex">
+		<div class="col-md-6 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			  <a href="https://github.com/arunkarthik2000/StackOverflow-Assistant-Chatbot" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg'); background-size: 550px 240px; background-position: center; background-repeat: no-repeat;">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+				<h3 class="heading"><a href="https://github.com/arunkarthik2000/StackOverflow-Assistant-Chatbot" target="_blank">Stack Overflow Assistant Chatbot using NLP Techniques</a></h3>
+				<p>Built a conversational chatbot to improve search efficiency on Stack Overflow by engaging with users, answering programming questions, and providing hyperlinks to related discussions.</p>
+				<p><strong>Technologies Used:</strong> Python, NLTK, TensorFlow, Keras, Transformers, Flask, Natural Language Processing, Data Processing, Web Scraping</p>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <div class="col-md-6 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			  <a href="https://github.com/arunkarthik2000/Self-Driving-Cars" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+				<h3 class="heading"><a href="https://github.com/arunkarthik2000/Self-Driving-Cars" target="_blank">Self-Driving Cars using Convolutional Neural Networks</a></h3>
+				<p>Utilized a deep CNN to train an end-to-end model for autonomous car navigation in a driving simulator, dynamically adjusting car's steering angle to drive on unfamiliar tracks.</p>
+				<p><strong>Technologies Used:</strong> Python, TensorFlow, Numpy, Pandas, OpenCV, Convolutional Neural Networks, Deep Learning, Computer Vision</p>
+			  </div>
+			</div>
+		  </div>
+		
+        </div>
+		<div class="row d-flex">  
+			  <div class="col-md-6 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/arunkarthik2000/Transfer-Learning-for-Image-Classification" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/arunkarthik2000/Transfer-Learning-for-Image-Classification" target="_blank">Transfer Learning for Multi-Class Image Classification</a></h3>
+						<p>Developed an image classification system using transfer learning with ResNet50, ResNet101, EfficientNetB0, and VGG16 models to enhance accuracy across six image categories.</p>
+						<p><strong>Technologies Used:</strong> Python, Keras, TensorFlow, OpenCV, Transfer Learning, Convolutional Neural Networks</p>
+					</div>
+				</div>
+			</div>			  
+			  
+			  <div class="col-md-6 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://github.com/arunkarthik2000/Face-Mask-Detector" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://github.com/arunkarthik2000/Face-Mask-Detector" target="_blank">Face Mask Detector using Convolutional Neural Networks</a></h3>
+					<p>Built a real-time face mask detection system using CNN and integrated it with a webcam for live detection, enabling seamless adaptation for CCTV-based mask compliance monitoring.</p>
+					<p><strong>Technologies Used:</strong> Python, TensorFlow, OpenCV, Convolutional Neural Networks, Computer Vision, Image Processing</p>
+				  </div>
+				</div>
+			  </div>
+		 </div>
+		 <div class="row d-flex">  
+			<div class="col-md-6 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/arunkarthik2000/Safety-Assistance-Surveillance-Bot" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_7.jpg'); background-size: 550px 240px; background-position: center; background-repeat: no-repeat;">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/arunkarthik2000/Safety-Assistance-Surveillance-Bot" target="_blank">Safety Assistance Surveillance Bot</a></h3>
+						<br>						
+						<p>Developed a remote-controlled surveillance bot with an ultrasonic sensor for 3D mapping and a mobile camera for live video streaming, enabling real-time monitoring via a JavaScript-powered web interface.</p>
+						<p><strong>Technologies Used:</strong> Robotics, Arduino Programming, IoT, Python, OpenCV, JavaScript, WebSockets, Flask, App Development</p>
+					</div>
+				</div>
+			</div>			
+			<div class="col-md-6 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/arunkarthik2000/Smart-Helmet-for-Coal-Miners" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_8.jpg'); background-size: 550px 250px; background-position: center; background-repeat: no-repeat;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://github.com/arunkarthik2000/Smart-Helmet-for-Coal-Miners" target="_blank">
+									Smart Helmet for Coal Miners using 8051 Microcontroller
+								</a>
+							</h3>
+							<p>Engineered a smart helmet prototype for coal miners utilizing an 8051 microcontroller to detect hazardous gases and abnormal temperature conditions, sending SMS alerts via GSM for enhanced safety.</p>
+							<p><strong>Technologies Used:</strong> 8051 Microcontroller, Assembly Language, Embedded Systems, Sensor Integration, Data Processing</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="13">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Hackathons</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span>Research Publications</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Nonprofit Organizations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<br>
+						<h2><span> Transforming Ideas into Lasting Impact  </span> </h2>
+						<div class="heading"> 
+							<h5> I love to transform innovative ideas into sustainable solutions that shape the future.</h5>
+						<br>
+						<!-- <p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p> -->
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Let’s connect! You can contact me through the details below.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-4 col-lg-4 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Location</h3>
+	            <p>Los Angeles, CA</p>
+	          </div>
+          </div>
+          <div class="col-md-4 col-lg-4 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Phone Number</h3>
+	            <p><a href="tel:+12136968759" style="color: inherit; text-decoration: none;">+ 1 (213) 696-8759</a></p>
+	          </div>
+          </div>
+          <div class="col-md-4 col-lg-4 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:karthikarun505@gmail.com" style="color: inherit; text-decoration: none;">karthikarun505@gmail.com</a></p>
+	          </div>
+          </div>
+
+		
+          <!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div> -->
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h4>Interested in collaborating or have any inquiries?</h4>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfYwo32r0iABoIu1SDHUYdvjqzvTsOIio8HJHeqQjQjrmF0RQ/viewform?usp=sharing" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a>
+				</div>
+			</div>
+				<br>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial" target="_blank"><span class="icon-youtube"></span></a></li> -->
+					  <!-- <li class="ftco-animate"><a href="https://www.linkedin.com/in/rishabhnmishra/" target="_blank"><span class="icon-linkedin"></span></a></li>   -->
+					  <li class="ftco-animate"><a href="https://x.com/ArunKarthik1103" target="_blank"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/arun.karthik.3950178" target="_blank"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/__arun__karthik__/" target="_blank"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.reddit.com/user/arun5461/" target="_blank"><span class="icon-reddit"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.</p>
+			</div>
+		  </div>
+		</div>
+	  </footer> -->
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
